@@ -1,3 +1,3 @@
-#map with date using format in https://github.com/donbeave/graphql-java-datetime
-scalar Date
-
+type Grade{
+    grade: String
+}

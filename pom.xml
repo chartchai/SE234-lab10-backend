@@ -50,6 +50,12 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-spring-boot-starter -->
+		<dependency>
+			<groupId>com.graphql-java</groupId>
+			<artifactId>graphql-spring-boot-starter</artifactId>
+			<version>3.10.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/com.graphql-java/graphql-java-tools -->
 		<dependency>
 			<groupId>com.graphql-java</groupId>
@@ -60,6 +66,12 @@
 			<groupId>com.zhokhov.graphql</groupId>
 			<artifactId>graphql-datetime-spring-boot-starter</artifactId>
 			<version>1.0.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 

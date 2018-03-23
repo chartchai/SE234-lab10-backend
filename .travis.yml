@@ -9,11 +9,9 @@ before_install:
 install:
 - mvn install -Dmaven.javadoc.skip=true -B -V
 - ls -l
-- docker build --build-arg JAR_FILE=/target/backend.jar -t dto80/se234-lab10-backend
-  .
+- docker build --build-arg JAR_FILE=/target/backend.jar -t dto80/se234-lab10-backend  .
 - docker push dto80/se234-lab10-backend
 - docker pull dto80/se234-lab10-client
-- docker network create spring
 
 script:
 - docker-compose -H "$DOCKER_HOST" up -d

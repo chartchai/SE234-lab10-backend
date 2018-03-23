@@ -12,7 +12,6 @@ services:
       - "8081:80"
     networks:
       - spring
-
- networks:
-   spring:
+networks:
+  spring:
     external: true

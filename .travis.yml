@@ -13,7 +13,7 @@ install:
   .
 - docker push dto80/se234-lab10-backend
 script:
-- docker-compose -H "$DOCKER_HOST" up
+- docker-compose -H "$DOCKER_HOST" up -d
 cache:
   directories:
   - "$HOME/.m2"

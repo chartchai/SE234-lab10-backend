@@ -13,6 +13,7 @@ install:
   .
 - docker push dto80/se234-lab10-backend
 - docker pull dto80/se234-lab10-client
+- docker network create spring
 
 script:
 - docker-compose -H "$DOCKER_HOST" up -d

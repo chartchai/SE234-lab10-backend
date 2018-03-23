@@ -6,18 +6,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class GradeServiceImpl implements GradeService {
     @Override
-    public Grade getGrade(double score) {
-        if (score > 80) {
-            return Grade.builder().grade("A").build();
+    public String getGrade(double score) {
+        if (score > 79.5) {
+            return "A";
         }
-        else if (score > 75){
-            return Grade.builder().grade("B").build();
-        }else if (score > 60){
-            return Grade.builder().grade("C").build();
-        }else if (score > 33) {
-            return Grade.builder().grade("D").build();
+        else if (score > 74.5){
+            return "B";
+        }else if (score > 59.5){
+            return "C";
+        }else if (score > 32.5) {
+            return "D";
         } else
-            return Grade.builder().grade("F").build();
+            return "F";
 
     }
 }

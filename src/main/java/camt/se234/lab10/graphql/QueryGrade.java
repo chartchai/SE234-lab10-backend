@@ -11,6 +11,6 @@ public class QueryGrade implements GraphQLQueryResolver {
     @Autowired
     GradeService gradeService;
     public Grade getGradeFromScore(double score){
-        return gradeService.getGrade(score);
+        return Grade.builder().grade(gradeService.getGrade(score)).build();
     }
 }

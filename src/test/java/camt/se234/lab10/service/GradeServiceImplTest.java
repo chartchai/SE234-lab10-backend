@@ -21,7 +21,6 @@ public class GradeServiceImplTest {
         assertThat(gradeService.getGrade(33),is("D"));
         assertThat(gradeService.getGrade(32),is("F"));
         assertThat(gradeService.getGrade(0),is("F"));
-        assertThat(gradeService.getGrade(100),is("F"));
 
     }
 

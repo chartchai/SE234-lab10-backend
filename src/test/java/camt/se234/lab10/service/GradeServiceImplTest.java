@@ -4,6 +4,7 @@ import camt.se234.lab10.entity.Grade;
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;
 import junitparams.converters.Param;
+import junitparams.naming.TestCaseName;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
@@ -36,6 +37,7 @@ public class GradeServiceImplTest {
 
     @Test
     @Parameters(method = "paramsForTestGetGradeParams")
+    @TestCaseName("Test getGrade Params [{index}] : input is {0}, expect {1}")
     public void testGetGradeparams(double score,String expectedGrade){
         GradeServiceImpl gradeService = new GradeServiceImpl();
         assertThat(gradeService.getGrade(score),is(expectedGrade));

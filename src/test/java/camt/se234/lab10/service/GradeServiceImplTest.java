@@ -1,12 +1,16 @@
 package camt.se234.lab10.service;
 
 import camt.se234.lab10.entity.Grade;
+import junitparams.JUnitParamsRunner;
+import junitparams.Parameters;
+import junitparams.converters.Param;
 import org.junit.Test;
-
+import org.junit.runner.RunWith;
 
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
+@RunWith(JUnitParamsRunner.class)
 public class GradeServiceImplTest {
     @Test
     public void testGetGrade(){
@@ -21,9 +25,23 @@ public class GradeServiceImplTest {
         assertThat(gradeService.getGrade(33),is("D"));
         assertThat(gradeService.getGrade(32),is("F"));
         assertThat(gradeService.getGrade(0),is("F"));
-        assertThat(gradeService.getGrade(1),is("F"));
-
     }
+
+    public Object paramsForTestGetGradeParams(){
+        return new Object[][]{
+                {100,"A"},
+                {77,"B"}
+        };
+    }
+
+    @Test
+    @Parameters(method = "paramsForTestGetGradeParams")
+    public void testGetGradeparams(double score,String expectedGrade){
+        GradeServiceImpl gradeService = new GradeServiceImpl();
+        assertThat(gradeService.getGrade(score),is(expectedGrade));
+    }
+
+
 
 
 }
